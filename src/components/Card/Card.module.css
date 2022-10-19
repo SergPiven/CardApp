@@ -1,0 +1,35 @@
+.card {
+  display: inline-block;
+  background-color: rgb(202, 129, 231);
+  border-radius: 10px;
+  margin: 12px;
+  padding: 0px;
+  border: none;
+  height: 340px;
+}
+
+.userdata {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.username {
+  font-size: 125%;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+}
+
+.userinfo {
+  font-size: 110%;
+  text-align: left;
+  overflow: hidden;
+}
+
+.card:hover {
+  background-color: rgba(56, 105, 220, 0.889);
+  transition: 0.8s;
+  cursor: pointer;
+  transform: scale(1.1);
+}

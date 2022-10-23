@@ -1,12 +1,18 @@
 import React from "react";
-import { ReactIcon } from "../Avatar";
+
+import { Avatar } from "../../components";
 
 import classes from "./Card.module.css";
 
 const Card = () => {
   return (
     <button className={classes.card}>
-      <ReactIcon />
+      <div className={classes.wall}>
+        <div className={classes.wrapper}>
+          <Avatar firstName="Aboba" lastName="Aboba" />
+        </div>
+      </div>
+
       <div className={classes.userdata}>
         <span className={classes.username}>Leanne Graham Bret</span>
         <span className={classes.userinfo}>Romaguera-Crona</span>

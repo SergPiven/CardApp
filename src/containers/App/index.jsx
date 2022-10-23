@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Card } from "../../components";
 import { api } from "../../config";
 
-import { styles } from "../../sources/styles/styles.css";
-import classes from "../../App.module.css";
+import "../../sources/styles/styles.css";
+import classes from "./App.module.css";
 
 function App() {
   const [list, setList] = useState([]);
+
   useEffect(() => {
     api
       .get("https://jsonplaceholder.typicode.com/users")

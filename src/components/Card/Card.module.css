@@ -1,20 +1,45 @@
 .card {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   background-color: rgb(202, 129, 231);
   border-radius: 10px;
-  margin: 12px;
   padding: 0px;
   border: none;
-  height: 340px;
+  transition: 0.4s;
+
+  width: calc(25% - 12px);
+}
+
+.card:hover {
+  background-color: rgba(56, 105, 220, 0.889);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.wall {
+  margin-bottom: 40px;
+  width: 100%;
+  height: 60px;
+  border-radius: 10px 10px 0 0;
+  background-color: #9b3030;
+}
+
+.wrapper {
+  position: relative;
+  bottom: -32px;
+  left: 16px;
+  width: fit-content;
 }
 
 .userdata {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  margin-bottom: 20px;
+  /* gap: 8px; */
 }
 
 .username {
+  margin-bottom: 12px;
   font-size: 125%;
   font-weight: bold;
   text-align: center;
@@ -22,14 +47,8 @@
 }
 
 .userinfo {
+  margin-bottom: 8px;
   font-size: 110%;
   text-align: left;
   overflow: hidden;
-}
-
-.card:hover {
-  background-color: rgba(56, 105, 220, 0.889);
-  transition: 0.8s;
-  cursor: pointer;
-  transform: scale(1.1);
 }

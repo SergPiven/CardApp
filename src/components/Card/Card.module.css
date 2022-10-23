@@ -6,6 +6,7 @@
   padding: 0px;
   border: none;
   height: 340px;
+  transition: 0.8s;
 }
 
 .userdata {
@@ -16,7 +17,7 @@
 
 .username {
   font-size: 125%;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   overflow: hidden;
 }
@@ -29,7 +30,6 @@
 
 .card:hover {
   background-color: rgba(56, 105, 220, 0.889);
-  transition: 0.8s;
   cursor: pointer;
   transform: scale(1.1);
 }

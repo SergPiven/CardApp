@@ -4,14 +4,14 @@ import { Avatar } from "../../components";
 import classes from "./Card.module.css";
 
 const Card = () => {
-  const [avatarForm, setAvatarForm] = useState(true); /* true => circle */
+  const [isCircle, setIsCircle] = useState(true);
 
   const circleAvatarForm = () => {
-    setAvatarForm(true);
+    setIsCircle(true);
   };
 
   const squareAvatarForm = () => {
-    setAvatarForm(false);
+    setIsCircle(false);
   };
 
   return (
@@ -21,7 +21,7 @@ const Card = () => {
           <Avatar
             firstName="Leanne Graham Bret"
             lastName="Romaguera-Crona"
-            form={avatarForm}
+            circleForm={isCircle}
           />
         </div>
       </div>
@@ -36,7 +36,7 @@ const Card = () => {
         <div className={classes.switch_field}>
           <input
             type="checkbox"
-            onClick={avatarForm ? squareAvatarForm : circleAvatarForm}
+            onClick={isCircle ? squareAvatarForm : circlgeAvatarForm}
           />
           <label>Square</label>
         </div>

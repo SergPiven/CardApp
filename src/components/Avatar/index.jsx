@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import stringToColor from "string-to-color";
+import cn from "classnames";
 
 import classes from "./Avatar.module.css";
 
-const Avatar = ({ firstName, lastName, form }) => {
+const Avatar = ({ firstName, lastName, circleForm }) => {
   const [color, setColor] = useState("#000000");
   const [name, setName] = useState("?");
 
@@ -22,7 +23,7 @@ const Avatar = ({ firstName, lastName, form }) => {
 
   return (
     <div
-      className={form ? classes.avatar_circle : classes.avatar_square}
+      className={cn(classes.avatar, !circleForm && classes.avatar_square)}
       style={{ backgroundColor: color }}
     >
       {name}

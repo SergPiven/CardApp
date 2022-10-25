@@ -3,7 +3,7 @@
   background-color: rgb(202, 129, 231);
   border-radius: 10px;
   margin: 12px;
-  padding: 0px;
+  padding: 0 6px 0 6px;
   border: none;
   height: 340px;
   transition: 0.8s;
@@ -32,4 +32,10 @@
   background-color: rgba(56, 105, 220, 0.889);
   cursor: pointer;
   transform: scale(1.1);
+}
+
+.switch_field {
+  display: flex;
+  margin-bottom: 36px;
+  overflow: hidden;
 }

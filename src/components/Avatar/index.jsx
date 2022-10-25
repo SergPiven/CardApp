@@ -3,7 +3,7 @@ import stringToColor from "string-to-color";
 
 import classes from "./Avatar.module.css";
 
-const Avatar = ({ firstName, lastName }) => {
+const Avatar = ({ firstName, lastName, form }) => {
   const [color, setColor] = useState("#000000");
   const [name, setName] = useState("?");
 
@@ -21,7 +21,10 @@ const Avatar = ({ firstName, lastName }) => {
   }, []);
 
   return (
-    <div className={classes.avatar} style={{ backgroundColor: color }}>
+    <div
+      className={form ? classes.avatar_circle : classes.avatar_square}
+      style={{ backgroundColor: color }}
+    >
       {name}
     </div>
   );

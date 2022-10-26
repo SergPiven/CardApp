@@ -1,27 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Card } from "../../components";
-import { api } from "../../config";
+import { useDispatch, useSelector } from "react-redux";
+import { getCustomers } from "../../asyncActions/Customers";
 
-import "../../sources/styles/styles.css";
 import classes from "./App.module.css";
 
 function App() {
-  const [list, setList] = useState([]);
-
-  useEffect(() => {
-    api
-      .get("https://jsonplaceholder.typicode.com/users")
-      .then((response) => {
-        setList(response.data);
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, [setList]);
+  // const [user, setUsers] = useState(
+  //   useSelector((state) => state.customers.customers)
+  // );
+  const dispatch = useDispatch();
+  const customer = useSelector((state) => state.customers.customers);
 
   return (
     <div className={classes.cards}>
+      <button onClick={() => dispatch(getCustomers())}>Add</button>
       <Card />
       <Card />
       <Card />

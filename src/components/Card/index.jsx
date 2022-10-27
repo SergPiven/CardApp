@@ -3,7 +3,7 @@ import { Avatar } from "../../components";
 
 import classes from "./Card.module.css";
 
-const Card = () => {
+const Card = (user) => {
   const [isCircle, setIsCircle] = useState(true); /* true => circle */
 
   const circleAvatarForm = () => {
@@ -14,6 +14,7 @@ const Card = () => {
     setIsCircle(false);
   };
 
+  console.log(user.user);
   return (
     <button className={classes.card}>
       <div className={classes.wall}>
@@ -27,12 +28,12 @@ const Card = () => {
       </div>
 
       <div className={classes.userdata}>
-        <span className={classes.username}>Leanne Graham Bret</span>
-        <span className={classes.userinfo}>Romaguera-Crona</span>
-        <span className={classes.userinfo}>Sincere@april.biz</span>
-        <span className={classes.userinfo}>Gwenborough</span>
-        <span className={classes.userinfo}>1-770-736-8031</span>
-        <span className={classes.userinfo}>hildegard.org</span>
+        <span className={classes.username}>{user.user.name}</span>
+        <span className={classes.userinfo}>{user.user.email}</span>
+        <span className={classes.userinfo}>{user.user.address.city}</span>
+        <span className={classes.userinfo}>{user.user.company.name}</span>
+        <span className={classes.userinfo}>{user.user.phone}</span>
+        <span className={classes.userinfo}>{user.user.web}</span>
         <div className={classes.switch_field}>
           <input
             type="checkbox"

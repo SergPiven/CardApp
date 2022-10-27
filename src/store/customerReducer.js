@@ -7,7 +7,7 @@ const defaultState = {
 export const customerReducer = (state = defaultState, action) => {
   switch (action.type) {
     case ADD_CUSTOMERS:
-      return { ...state, customers: [action.payload] };
+      return { ...state, customers: action.payload };
     default:
       return state;
   }
